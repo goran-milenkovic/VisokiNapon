@@ -1,0 +1,143 @@
+<div class="container2" *ngIf = "!codeConfirmation">
+<form >
+    <div class = "form-group">	
+		<label class="head-title"> Registrujte se </label>
+        <label for ="email" style="font-weight: 500;">Email</label>
+        <input
+            required
+            ngModel
+			name ="email"
+            id = "email"
+            type = "text"
+			pattern = "[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}"
+			#email = "ngModel"	
+            class = "form-control" #emailparam>
+			<div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+                <div *ngIf="email.errors.required">Email je obavezan...</div>
+                <div *ngIf="email.errors.pattern">Uneli ste neispravan mail...</div>
+			</div>
+	</div>
+	
+	<div class = "form-group">
+        <label for ="name" style="font-weight: 500;">Ime</label>
+        <input
+            required
+            maxlength="30"
+            ngModel
+			name ="name"
+            id = "name"
+            type = "text"
+            class = "form-control" #nameparam>
+	</div>	
+	
+	<div class = "form-group">
+        <label for ="surname" style="font-weight: 500;">Prezime</label>
+        <input
+            required
+            maxlength="30"
+            ngModel
+			name ="surname"
+            id = "surname"
+            type = "text"
+            class = "form-control" #surnameparam>
+	</div>	
+			
+	<div class = "form-group">
+      <label for ="username" style="font-weight: 500;">Korisničko ime</label>
+        <input
+            required
+            minlength="5"
+            maxlength="24"
+            ngModel
+			name ="newusername"
+            id = "newusername"
+            type = "text"
+            pattern = "^[a-zA-Z0-9]+(?:[-_]?[a-zA-Z0-9]+)*$"
+            #newusername = "ngModel"
+            class = "form-control" #newusernameparam >
+            <div class="alert alert-danger" *ngIf="newusername.touched && !newusername.valid">
+                <div *ngIf="newusername.errors.required">Korisničko ime je obavezno...</div>
+                <div *ngIf="newusername.errors.minlength">Korisničko ime mora imati minimum 5 karaktera...</div>
+                <div *ngIf="newusername.errors.pattern">Korisničko ime mora početi slovom ili brojem, 
+                    može sadrzati - i _ kao separatore, i ne sme se završiti istim. </div>
+			</div>
+	</div>	
+	
+	<div class = "form-group">
+		<label for ="password" style="font-weight: 500;">Lozinka</label>
+		<show-hide-password  btnStyle="primary" [btnOutline]="false">
+		  <input
+            ngModel
+            required
+            minlength="8"
+            maxlength="18"
+			name = "newpassword"
+            id = "newpassword"
+			type = "password"
+			pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+			#newpassword = "ngModel"			
+            class = "form-control" #newpasswordparam>
+			
+		</show-hide-password>
+		<div class="alert alert-danger" *ngIf="newpassword.touched && !newpassword.valid">
+                <div *ngIf="newpassword.errors.required">Lozinka je obavezna...</div>
+                <div *ngIf="newpassword.errors.minlength">Lozinka mora sadržati minimum 8 karaktera...</div>
+                <div *ngIf="newpassword.errors.pattern">Lozinka se mora sastojati od malih i velikih slova, specijalnih karaktera
+													i brojeva...</div>
+		</div>
+    </div>
+	
+
+	
+    <div class = "form-group">
+        <label for ="confirmpassword" style="font-weight: 500;">Potvrdite lozinku</label>
+        <input
+            ngModel
+            required
+            #confirmpassword = "ngModel"
+            minlength="8"
+            maxlength="18"
+			name = "confirmpassword"
+            id = "confirmpassword"
+            type = "password"
+            class = "form-control" #confirmpasswordparam>
+            <div class="alert alert-danger" *ngIf="confirmpassword.dirty && newpassword.value.length==0">Niste uneli lozinku...</div>
+            <div class="alert alert-danger" *ngIf="confirmpassword.dirty && newpassword.value.length!=0
+                && (confirmpassword.value.length > newpassword.value.length || confirmpassword.value.length < newpassword.value.length
+				|| (confirmpassword.value != newpassword.value 
+                && confirmpassword.value.length == newpassword.value.length) )">Lozinke se ne poklapaju...</div>
+	</div>
+	<div class = "form-group">
+    <button type ="submit" class="button" [disabled]="disabledField" 
+    (click)=" ! (!newpassword.valid || !newusername.valid || !email.valid || 
+    !(confirmpassword.value== newpassword.value)) ?
+    checkSignUpInfo(emailparam.value, nameparam.value, surnameparam.value, newusernameparam.value, 
+    newpasswordparam.value, confirmpasswordparam.value) : 
+    info(emailparam.value, newusernameparam.value, 
+    newpasswordparam.value, confirmpasswordparam.value)">Registrujte se</button>   
+    <div style= "color:red;"><b>{{signupmessage}}</b></div>
+	</div>
+	<div class = "form-group">
+	<button type ="button" class="button" 
+	(click)="changeToLogin()">Otkaži</button>
+	</div>
+</form>
+</div>
+
+<div class="container1" *ngIf = "codeConfirmation">
+	<form >
+		<div class = "form-group">	
+			<label class="head-title"> Potvrdite registraciju </label>
+			<label for ="answer" style="font-weight: 500;">Verifikacioni kod </label>
+			<input [disabled]="requestSent"
+               #inputstring (keydown.enter)="confirmCode(inputstring.value)"
+               ngModel
+               name ="answer"
+               id = "answer"
+               type = "text"
+               placeholder="Verifikacioni kod..."
+               class = "form-control">
+			<div style= "color:red;"><b>{{signupmessage}}</b></div>
+		</div>
+	</form>
+</div>

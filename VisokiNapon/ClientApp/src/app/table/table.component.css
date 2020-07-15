@@ -1,0 +1,64 @@
+.button{
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  background-color: #614e75;
+  border: 2px solid #dad8d7;
+  color: white;
+  font-size: 17px;
+  margin: 8px 8px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #d8dad7;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px #dad8d7;
+}
+
+.number_of_questions{
+  position: absolute;
+  top: 7px;
+  left: 30px;
+  width: 200px;
+  height: 50px;
+  background-color: #35373b;
+  border: 2px solid #dad8d7;
+  color: white;	
+  text-align: center;
+  line-height: 50px;
+  font-size: 17px;
+  border-radius: 4px;
+  box-shadow: 0px 10px 10px #5d3c5d;
+}
+
+.feedback{
+  position: absolute;
+  top: 65px;
+  left: -20px;
+  width: 300px;
+  height: 50px;
+  background-color: #35373b;
+  color: white;	
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  font-size: 17px;
+  white-space: pre-wrap;
+  border: 2px solid #dad8d7;
+  border-radius: 4px;
+  box-shadow: 0px 10px 10px #5d3c5d;
+}
+
+.button:hover{
+  background-color: #4c3d5c;
+  border: 1.25px solid #918b88;
+  box-shadow: 0px 15px 15px #5d3c5d;
+}
+
+.used{ 
+  background-color: #ffb3b3;
+  opacity: 0.85;
+}
+
+.clicked{ 
+  background-color: #33293d;
+}

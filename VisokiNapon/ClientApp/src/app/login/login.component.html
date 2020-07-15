@@ -1,0 +1,50 @@
+<div class="container">
+<form>
+    
+	<div class = "form-group">
+		<label class="head-title"> Prijavite se </label>
+        <label for ="username" style="font-weight: 500;">Korisničko ime</label>
+        <input
+            required
+            minlength="5"
+            maxlength="24"
+            ngModel
+            name ="username"
+            id = "username"
+            type = "text"
+            pattern = "^[a-zA-Z0-9]+(?:[-_]?[a-zA-Z0-9]+)*$"
+            #username = "ngModel"
+            class = "form-control" #usernameparam >
+	</div>
+    
+	<div class = "form-group">
+		<label for ="password" style="font-weight: 500;">Lozinka</label>
+		<show-hide-password  btnStyle="primary" [btnOutline]="false">
+		<input
+            ngModel
+            required
+            minlength="8"
+            maxlength="18"
+            name = "password"
+            id = "password"
+            type = "password" 
+			pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+			#password = "ngModel"			
+            class = "form-control" #passwordparam>			
+		</show-hide-password>
+    </div>
+	<div class = "form-group">
+        <button type ="submit" class="button"
+            (click)= "checkData(usernameparam.value, passwordparam.value)  ? ( password.valid && username.valid ?
+            checkLoginInfo(usernameparam.value, passwordparam.value) : invalidRequest()) : requiredFields()" >
+            Prijavite se
+        </button> 
+        <div style= "color:red;"><b>{{message}}</b></div>
+    </div>
+    
+    <div class = "form-group">
+	    <button type ="button" class="button_reg" (click)="changeToSignup()">Registrujte se</button> 
+	</div>
+</form>
+
+</div>

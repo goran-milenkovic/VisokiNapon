@@ -1,0 +1,56 @@
+.button{
+  width: 150px;
+  height: 58px;
+  right: 152px;
+  top: 0px;
+  left: -10px;
+  position: absolute;
+  background-color: #614e75;
+  border: 2px solid #dad8d7;
+  color: white;
+  padding: 14px 20px;
+  cursor: pointer;
+  border: 1px solid #d8dad7;
+  border-radius: 4px;
+}
+
+table{
+  opacity: 0.99;
+}
+
+
+.label_order_number{
+  width: 40px;
+  background-color: #ccc2d6;
+  border: 2px solid #dad8d7;
+  color: white; 
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.label_name{
+  width: 350px;
+  background-color: rgb(149, 117, 180);
+  border: 2px solid #dad8d7;
+  color: white; 
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.label_amount{
+  width: 200px;
+  background-color: #ccc2d6;
+  border: 2px solid #dad8d7;
+  color: white; 
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 4px;
+}

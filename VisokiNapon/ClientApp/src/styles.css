@@ -1,0 +1,86 @@
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.center{
+  left: 380px;
+  top: 235px;
+  position: absolute;
+}
+
+.tender_label{
+  width: 300px;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.main_container {
+  position: absolute;
+  width: 900px;
+  height: 531px;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+
+.div_with_margins{
+  margin-top: 15px;
+  margin-right: 20px;
+  border-radius: 2px;
+  border: 1px solid #d8dad7;
+  background-color: #c97dc9;
+  box-shadow: 5px 5px 5px #d8dad7;
+  padding: 10px 10px;
+}
+
+.tender_button{
+  width: 300px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #614e75;
+  border: 2px solid #dad8d7;
+  color: white;
+  text-align: center;
+  margin: 5px 0;
+  font-size: 15px;
+  cursor: pointer;
+  border: 1px solid #d8dad7;
+  border-radius: 4px;
+}
+
+.tender_input{
+  width: 300px;
+  height: 40px;
+  background-color: #ccc2d6;
+  border: 2px solid #dad8d7;
+  color: white; 
+  text-align: center;
+  padding: 14px 20px;
+  line-height: 40px;
+  margin: 5px 0;
+  vertical-align: middle;
+  font-size: 15px;
+  border-radius: 4px;
+}
+
+html { 
+  background: url("src/assets/images/background.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

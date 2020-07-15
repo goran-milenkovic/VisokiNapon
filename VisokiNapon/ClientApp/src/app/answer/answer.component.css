@@ -1,0 +1,214 @@
+.tender_p{
+  border-radius: 2px;
+  border: 1px solid #d8dad7;
+  background-color: #c97dc9;
+  box-shadow: 2px 3px 3px #e2e2e2;
+  padding: 3px 3px;
+  width: 40%;
+}
+
+.inform {
+  border-radius: 2px;
+  border: 1px solid #d8dad7;
+  background-color: #c97dc9;
+  box-shadow: 2px 3px 3px #e2e2e2;
+	color : white;
+	font-size: 150%;
+	font-weight: bold; 
+	width: 848px;
+	text-align: center;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 848px;
+  margin-right: -50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.feedback{
+  width: 700px;
+  height: 40px;
+  top: -40px;
+  left: 100px;
+  right: 100px;
+  position: relative;
+  margin: 0px 30px 10px 30px;
+  background-color: #35373b;
+  border: 2px solid #dad8d7;
+  color: white; 
+  text-align: center;
+  vertical-align: middle;
+  line-height:40px;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.tender_feedback{
+  width: 500px;
+  height: 40px;
+  left: 200px;
+  right: 200px;
+  margin: 0px 30px 10px 70px;
+  position: relative;
+  background-color: #35373b;
+  border: 2px solid #dad8d7;
+  color: white; 
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  font-size: 18px;
+  border-radius: 4px;
+  margin: 35px 0px 10px 0px;
+  box-shadow: 5px 5px 5px #dad8d7;
+}
+
+.value_of_question{
+  width: 300px;
+  height: 50px;
+  position: absolute;
+  right: 300px;
+  left: 300px;
+  background-color: #ccc2d6;
+  border: 2px solid #dad8d7;
+  color: white; 
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.question{
+  width: 900px;
+  height: 200px;
+  position: relative;
+  top: 2px;
+  background-color: #614e75;
+  border: 2px solid #dad8d7;
+  color: white;
+  display: table-cell; 
+  vertical-align: middle; 
+  text-align: center; 
+  font-size: 20px;
+  border-radius: 4px;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+input[type=text], select {
+  width: 360px;
+  height: 50px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color:#ccc2d6;
+  position: relative;
+  left: 270px;
+  right: 270px;
+  background-color: #ccc2d6;
+  color: white;
+}
+
+.wonAmount{
+  width: 300px;
+  height: 50px;
+  left: 300px;
+  right: 300px;
+  bottom: 120px;
+  position: absolute;
+  background-color: #35373b;
+  border: 2px solid #dad8d7;
+  color: white;	
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.tender_container{
+  position: relative;
+  left: -20%;
+}
+
+.tenderHelpDiv{
+  display: flex;
+}
+
+.tender{
+  width: 50px;
+  height: 50px;
+  position: static;
+  left: 232px;
+  background-color: #ccc2d6;
+  border: 2px solid #dad8d7;
+  color: white; 
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  font-size: 28px;
+  border-radius: 4px;
+}
+
+.tender:disabled{
+  width: 50px;
+  height: 50px;
+  position: static;
+  left: 232px;
+  background-color: #ffb3b3;
+  border: 2px solid #ffb3b3;
+  color: white; 
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  font-size: 28px;
+  border-radius: 4px;
+}
+
+.replaceQuestion1{
+  width: 50px;
+  height: 50px;
+  position: static;
+  left: 282px;
+  background-color: #ccc2d6;
+  border: 2px solid #dad8d7;
+  border-radius: 4px;
+}
+
+.replaceQuestion2{
+  width: 50px;
+  height: 50px;
+  position: static;
+  left: 332px;
+  background-color: #ccc2d6;
+  border: 2px solid #dad8d7;
+  border-radius: 4px;
+}
+ 
+.replaceQuestion1:disabled{ 
+  background-color: #ffb3b3;
+}
+
+.replaceQuestion2:disabled{
+  background-color: #ffb3b3;
+}
+
+.timer{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  color: white;
+  background-color: #ccc2d6;
+  border: 2px solid #dad8d7;
+  border-radius: 4px;
+}
