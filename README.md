@@ -1,7 +1,5 @@
 # VisokiNapon
 
-## IP adresa servera: [165.22.69.176](https://165.22.69.176)
-
 
 Aplikacija se implementira po uzoru na kviz Visoki napon. 
 Visoki napon je prvi srpski licencirani kviz i emitovan je od 29.06.2006. do 24.06.2011. na televiziji RTS.  
@@ -35,3 +33,8 @@ Ukoliko preskočite ovaj korak, nećete dobijati kod u konfirmacionom mailu, a i
 6. U pretraživacu otvoriti stranicu 
 <pre>https://localhost:5001/</pre>
 
+### Studenti koji rade na projektu:
+
+- [Goran Milenković](https://github.com/goran-milenkovic)
+- [Lazar Mladenović](https://github.com/LMladenovic)
+- [Ivona Milutinović](https://github.com/ivonamilutinovic)
